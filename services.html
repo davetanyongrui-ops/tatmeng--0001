@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom Carpentry Services Singapore | Tat Meng</title>
+<meta content="Explore built-in cabinets, retail fit-outs, bespoke furniture, outdoor carpentry and cabinet alteration services by Tat Meng in Singapore." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Work+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="tailwind-config.js"></script>
+<script src="script.js" defer></script>
+<script src="translations.js" defer></script>
+<link href="styles.css" rel="stylesheet"/>
+  </head>
+<body class="page-services min-h-screen flex flex-col antialiased">
+<!-- TopAppBar -->
+<header class="bg-surface border-b border-outline-variant w-full top-0 sticky z-50">
+<div class="site-header-inner flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<a aria-label="Tat Meng home" href="index.html">
+<img alt="Tat Meng" class="site-logo site-logo-header" decoding="async" height="320" src="tat-meng-logo-web11.png" width="320"/>
+</a>
+</div>
+<nav class="site-header-nav hidden md:flex items-center gap-lg">
+<a data-i18n="nav-home" class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a data-i18n="nav-about" class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+<a data-i18n="nav-services" class="font-label-sm text-label-sm uppercase text-primary font-bold border-b-2 border-primary pb-1" href="services.html">Services</a>
+<a data-i18n="nav-contact" class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex items-center gap-sm">
+  <!-- Language Selector Dropdown -->
+  <div class="relative inline-block">
+    <select aria-label="Select Language" class="lang-selector-select bg-transparent text-on-surface-variant border border-outline hover:border-primary px-xs py-[2px] rounded-DEFAULT font-label-sm text-label-sm uppercase focus:outline-none cursor-pointer">
+      <option class="bg-surface text-on-surface" value="en">EN</option>
+      <option class="bg-surface text-on-surface" value="zh">中文</option>
+      <option class="bg-surface text-on-surface" value="id">ID</option>
+    </select>
+  </div>
+  <button aria-label="Open Menu" class="text-primary hover:text-primary transition-colors focus:outline-none md:hidden" id="menu-btn">
+    <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+  </button>
+</div>
+</div>
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-on-background/50 z-40 hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<nav class="fixed inset-y-0 left-0 bg-surface border-r border-outline-variant iron-shadow w-80 z-50 transform -translate-x-full transition-transform duration-300 flex flex-col py-lg px-md h-full" id="nav-drawer">
+<div class="flex justify-between items-center mb-lg">
+<h2 data-i18n="nav-drawer-title" class="font-headline-md text-headline-md font-bold text-primary">NAVIGATION</h2>
+<button class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none" id="close-menu-btn">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<ul class="flex flex-col gap-sm flex-grow">
+<li>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="index.html">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="home">home</span>
+<span data-i18n="nav-home" class="font-label-sm text-label-sm uppercase">Home</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="about.html">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="foundation">foundation</span>
+<span data-i18n="nav-about" class="font-label-sm text-label-sm uppercase">About Us</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-4 py-3 bg-secondary-container text-on-secondary-container font-bold group" href="services.html">
+<span class="material-symbols-outlined text-primary" data-icon="handyman">handyman</span>
+<span data-i18n="nav-services" class="font-label-sm text-label-sm uppercase">Services</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="contact.html">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="mail">mail</span>
+<span data-i18n="nav-contact" class="font-label-sm text-label-sm uppercase">Contact Us</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-container-max mx-auto px-gutter md:px-lg w-full pb-xl space-y-xl">
+<!-- Hero Section -->
+<section class="inner-hero services-hero text-center space-y-md px-gutter py-xl md:py-[112px]">
+<span data-i18n="serv-hero-kicker" class="hero-kicker font-label-sm text-label-sm uppercase tracking-widest">Direct-Factory Services</span>
+<h1 data-i18n="serv-hero-title" class="hero-title font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg">What Do You Need Built?</h1>
+<p data-i18n="serv-hero-copy" class="hero-copy font-body-lg text-body-lg max-w-3xl mx-auto">From HDB cabinetry and wardrobes to retail counters, custom furniture and repair work, choose your scope and send us the dimensions or photos for an estimate.</p>
+<div class="h-px w-32 bg-on-primary/60 mx-auto mt-lg"></div>
+</section>
+<!-- Visual Examples -->
+<section class="space-y-lg">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-sm border-b border-tertiary pb-sm">
+<div class="space-y-xs">
+<span data-i18n="serv-vis-kicker" class="font-label-sm text-label-sm uppercase text-secondary">Visual Examples</span>
+<h2 data-i18n="serv-vis-title" class="font-headline-lg text-headline-lg text-primary">Common Project Scopes</h2>
+</div>
+<p data-i18n="serv-vis-desc" class="font-body-md text-body-md text-on-surface-variant max-w-xl">These examples show typical work categories. Your quotation is based on confirmed measurements, materials, hardware and installation needs.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-md">
+<figure class="project-example">
+<img alt="Real custom kitchen cabinetry installation on-site" decoding="async" loading="lazy" src="assets/projects/Branded_IMG20260529112311.jpg"/>
+<figcaption data-i18n="serv-fig-res">Residential Built-Ins</figcaption>
+</figure>
+<figure class="project-example">
+<img alt="Retail fit-out design concept" decoding="async" loading="lazy" src="assets/projects/retail-fitout.jpg"/>
+<figcaption data-i18n="serv-fig-comm">Commercial Fit-Outs</figcaption>
+</figure>
+<figure class="project-example">
+<img alt="Custom sideboard cabinet and bespoke furniture design concept" decoding="async" loading="lazy" src="assets/projects/bespoke-furniture.jpg"/>
+<figcaption data-i18n="serv-fig-bespoke">Bespoke Furniture</figcaption>
+</figure>
+<figure class="project-example">
+<img alt="Outdoor decking design concept" decoding="async" loading="lazy" src="assets/projects/outdoor-decking.jpg"/>
+<figcaption data-i18n="serv-fig-outdoor">Outdoor Carpentry</figcaption>
+</figure>
+<figure class="project-example">
+<img alt="Cabinet hardware retrofit design concept" decoding="async" loading="lazy" src="assets/projects/cabinet-repair.jpg"/>
+<figcaption data-i18n="serv-fig-repair">Repair &amp; Alterations</figcaption>
+</figure>
+</div>
+</section>
+<!-- Services Catalogue -->
+<section class="space-y-xl pt-lg">
+<article class="border border-outline-variant bg-surface-container-lowest p-gutter md:p-lg">
+<div class="flex flex-col lg:flex-row gap-lg">
+<div class="lg:w-1/3 flex flex-col gap-sm">
+<span data-i18n="serv-cat-1-num" class="font-label-sm text-label-sm uppercase text-secondary">01 / Residential</span>
+<h2 data-i18n="serv-cat-1-title" class="font-headline-lg text-headline-lg text-primary">Residential Built-In Carpentry</h2>
+<p data-i18n="serv-cat-1-desc" class="font-body-md text-body-md text-on-surface-variant">Storage planned for HDB flats, BTO units, condominiums and landed homes, with layouts fitted to your daily use.</p>
+<figure class="service-category-visual">
+<img alt="Real custom kitchen cabinetry installation on-site" decoding="async" loading="lazy" src="assets/projects/Branded_IMG20260529112311.jpg"/>
+<figcaption data-i18n="serv-cat-1-fig">Residential built-in cabinetry concept</figcaption>
+</figure>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="service-detail"><h3 data-i18n="serv-cat-1-s1-title">Custom Kitchen Cabinets</h3><p data-i18n="serv-cat-1-s1-desc">Moisture-resistant cabinetry planned around appliances, with seamless ABS trimming, customizable internal carcasses, and premium soft-close mechanics such as BLUM systems.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-1-s2-title">Wardrobes &amp; Walk-In Closets</h3><p data-i18n="serv-cat-1-s2-desc">Floor-to-ceiling storage with sliding or casement doors, pull-out accessory trays, vanity mirrors, and sensor LED lighting.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-1-s3-title">Feature Walls &amp; TV Consoles</h3><p data-i18n="serv-cat-1-s3-desc">Floating consoles, suspended shelves, hidden wire management, and large-format accent walls that anchor the living space.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-1-s4-title">Foyer &amp; Shoe Cabinets</h3><p data-i18n="serv-cat-1-s4-desc">Space-saving, ventilated entry storage built to match your home's design language.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-1-s5-title">Study &amp; Home Office Stations</h3><p data-i18n="serv-cat-1-s5-desc">Integrated long-span desks, heavy-load bookshelves, and overhead filing cabinets for clean, ergonomic workflows.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-1-s6-title">Bathroom Vanity Cabinets</h3><p data-i18n="serv-cat-1-s6-desc">High-moisture-resistant under-sink cabinetry with water-repellent laminates and clean plumbing concealment.</p></div>
+<div class="service-detail md:col-span-2"><h3 data-i18n="serv-cat-1-s7-title">Platform Beds &amp; Hidden Storage</h3><p data-i18n="serv-cat-1-s7-desc">Elevated bedroom systems with concealed lift-up hatches or hydraulic storage drawers, replacing bulky freestanding frames.</p></div>
+</div>
+</div>
+</article>
+<article class="border border-primary bg-primary text-on-primary p-gutter md:p-lg">
+<div class="flex flex-col lg:flex-row gap-lg">
+<div class="lg:w-1/3 flex flex-col gap-sm">
+<span data-i18n="serv-cat-2-num" class="font-label-sm text-label-sm uppercase text-secondary-fixed">02 / Commercial</span>
+<h2 data-i18n="serv-cat-2-title" class="font-headline-lg text-headline-lg text-on-primary">Commercial &amp; Retail Interior Fit-Outs</h2>
+<p data-i18n="serv-cat-2-desc" class="font-body-md text-body-md text-on-primary/80">Counters, displays and workplace cabinetry designed around customer flow, operations and your chosen finishes.</p>
+<figure class="service-category-visual service-category-visual-dark">
+<img alt="Retail display unit and counter fit-out concept" decoding="async" loading="lazy" src="assets/projects/retail-fitout.jpg"/>
+<figcaption data-i18n="serv-cat-2-fig">Retail fit-out concept</figcaption>
+</figure>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="service-detail service-detail-dark"><h3 data-i18n="serv-cat-2-s1-title">Reception Counters &amp; Front Desks</h3><p data-i18n="serv-cat-2-s1-desc">Bespoke architectural statement counters using premium stone, wood veneer, or integrated laminate finishes.</p></div>
+<div class="service-detail service-detail-dark"><h3 data-i18n="serv-cat-2-s2-title">Office Workstations &amp; Discussion Pods</h3><p data-i18n="serv-cat-2-s2-desc">Ergonomic acoustic partitions, custom meeting tables, and collaborative desks tailored to corporate layouts.</p></div>
+<div class="service-detail service-detail-dark"><h3 data-i18n="serv-cat-2-s3-title">Retail Display Units &amp; Shelving</h3><p data-i18n="serv-cat-2-s3-desc">Heavy-load perimeter shelving, product islands, and glass-encased showcases for boutiques and galleries.</p></div>
+<div class="service-detail service-detail-dark"><h3 data-i18n="serv-cat-2-s4-title">F&amp;B Cafe &amp; Restaurant Carpentry</h3><p data-i18n="serv-cat-2-s4-desc">Industrial bar counters, banquette seating structures, server stations, and architectural overhead wooden lattices.</p></div>
+<div class="service-detail service-detail-dark md:col-span-2"><h3 data-i18n="serv-cat-2-s5-title">Pantry &amp; Office Lounge Assemblies</h3><p data-i18n="serv-cat-2-s5-desc">Lockers, kitchenettes, and durable breakroom counters engineered for frequent communal use.</p></div>
+</div>
+</div>
+</article>
+<article class="border border-outline-variant bg-surface-container-lowest p-gutter md:p-lg">
+<div class="flex flex-col lg:flex-row gap-lg">
+<div class="lg:w-1/3 flex flex-col gap-sm">
+<span data-i18n="serv-cat-3-num" class="font-label-sm text-label-sm uppercase text-secondary">03 / Made to Measure</span>
+<h2 data-i18n="serv-cat-3-title" class="font-headline-lg text-headline-lg text-primary">Bespoke Standalone Furniture</h2>
+<p data-i18n="serv-cat-3-desc" class="font-body-md text-body-md text-on-surface-variant">Made-to-measure pieces for rooms, uses or dimensions that standard furniture cannot address well.</p>
+<figure class="service-category-visual">
+<img alt="Bespoke walnut sideboard cabinet concept" decoding="async" loading="lazy" src="assets/projects/bespoke-furniture.jpg"/>
+<figcaption data-i18n="serv-cat-3-fig">Bespoke furniture concept</figcaption>
+</figure>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="service-detail"><h3 data-i18n="serv-cat-3-s1-title">Sideboards &amp; Credenzas</h3><p data-i18n="serv-cat-3-s1-desc">Sized to exact room specifications with drawers, shelving, and premium wood veneer or laminate finishes.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-3-s2-title">Display Cases &amp; Bookshelves</h3><p data-i18n="serv-cat-3-s2-desc">Floor-to-ceiling libraries, collectible display nooks, and custom room-divider shelving.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-3-s3-title">Bed Frames &amp; Headboards</h3><p data-i18n="serv-cat-3-s3-desc">Upholstered or geometric wood-slat headboards integrated into solid foundation platforms.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-3-s4-title">Accent Benches &amp; Sideboards</h3><p data-i18n="serv-cat-3-s4-desc">Low-profile credenzas, custom entry consoles, and storage benches.</p></div>
+</div>
+</div>
+</article>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<article class="border border-outline-variant bg-surface-container-lowest p-gutter md:p-lg flex flex-col gap-md">
+<span data-i18n="serv-cat-4-num" class="font-label-sm text-label-sm uppercase text-secondary">04 / Exterior</span>
+<h2 data-i18n="serv-cat-4-title" class="font-headline-lg text-headline-lg text-primary">Structural Outdoor Carpentry</h2>
+<p data-i18n="serv-cat-4-desc" class="font-body-md text-body-md text-on-surface-variant">Outdoor structures and screens using material options selected for exposed Singapore conditions.</p>
+<figure class="service-category-visual">
+<img alt="Outdoor decking and privacy screen carpentry concept" decoding="async" loading="lazy" src="assets/projects/outdoor-decking.jpg"/>
+<figcaption data-i18n="serv-cat-4-fig">Outdoor carpentry concept</figcaption>
+</figure>
+<div class="service-detail"><h3 data-i18n="serv-cat-4-s1-title">Timber &amp; Composite Decking</h3><p data-i18n="serv-cat-4-s1-desc">High-performance, splinter-free decking for balconies, patios, and planter boxes.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-4-s2-title">Trellises &amp; Pergolas</h3><p data-i18n="serv-cat-4-s2-desc">Solid timber overhead structures providing shade and structural character.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-4-s3-title">Privacy Fencing &amp; Louvered Screens</h3><p data-i18n="serv-cat-4-s3-desc">Exterior screens that reduce direct sunlight and views while maintaining airflow.</p></div>
+</article>
+<article class="border border-outline-variant bg-surface-container-lowest p-gutter md:p-lg flex flex-col gap-md">
+<span data-i18n="serv-cat-5-num" class="font-label-sm text-label-sm uppercase text-secondary">05 / Aftercare</span>
+<h2 data-i18n="serv-cat-5-title" class="font-headline-lg text-headline-lg text-primary">Repair, Restoration &amp; Alteration Work</h2>
+<p data-i18n="serv-cat-5-desc" class="font-body-md text-body-md text-on-surface-variant">Targeted alterations and repairs that may extend the usable life of existing cabinetry.</p>
+<figure class="service-category-visual">
+<img alt="Kitchen cabinet hardware replacement and alteration concept" decoding="async" loading="lazy" src="assets/projects/cabinet-repair.jpg"/>
+<figcaption data-i18n="serv-cat-5-fig">Cabinet retrofit concept</figcaption>
+</figure>
+<div class="service-detail"><h3 data-i18n="serv-cat-5-s1-title">Hardware Retrofitting &amp; Replacements</h3><p data-i18n="serv-cat-5-s1-desc">Upgrade creaking hinges or broken drawer runners to quiet, premium soft-close systems.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-5-s2-title">Cabinet Resizing &amp; Modifications</h3><p data-i18n="serv-cat-5-s2-desc">Re-engineer existing kitchens to accommodate larger ovens, dishwashers, or refrigerators.</p></div>
+<div class="service-detail"><h3 data-i18n="serv-cat-5-s3-title">Laminate Re-Skinning &amp; Repairs</h3><p data-i18n="serv-cat-5-s3-desc">Repair water-logged cabinet bases, peeling laminate edges, and chipped surfaces.</p></div>
+</article>
+</div>
+</section>
+<!-- Working Process -->
+<section class="service-process border border-outline-variant bg-surface-container-lowest p-gutter md:p-lg space-y-lg">
+<div class="max-w-3xl space-y-sm">
+<span data-i18n="serv-proc-kicker" class="font-label-sm text-label-sm uppercase text-secondary">Our Process</span>
+<h2 data-i18n="serv-proc-title" class="font-headline-lg text-headline-lg text-primary">From Floor Plan to Finished Installation</h2>
+<p data-i18n="serv-proc-desc" class="font-body-md text-body-md text-on-surface-variant">Send the information we need to assess the job, then confirm the quoted scope before fabrication and installation.</p>
+</div>
+<ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<li class="process-step">
+<span>01</span>
+<h3 data-i18n="serv-proc-step-1-title">Send Your Brief</h3>
+<p data-i18n="serv-proc-step-1-desc">Share your floor plan, inspiration images, dimensions, or repair photos through WhatsApp or email.</p>
+</li>
+<li class="process-step">
+<span>02</span>
+<h3 data-i18n="serv-proc-step-2-title">Site Measurement</h3>
+<p data-i18n="serv-proc-step-2-desc">We assess access, measurements, appliance clearances, storage needs, and installation constraints.</p>
+</li>
+<li class="process-step">
+<span>03</span>
+<h3 data-i18n="serv-proc-step-3-title">Itemized Quotation</h3>
+<p data-i18n="serv-proc-step-3-desc">You receive a clear quotation covering scope, materials, hardware, finishes, and installation.</p>
+</li>
+<li class="process-step">
+<span>04</span>
+<h3 data-i18n="serv-proc-step-4-title">Material Confirmation</h3>
+<p data-i18n="serv-proc-step-4-desc">Confirm laminates, timber tones, hardware systems, internal configurations, and final dimensions.</p>
+</li>
+<li class="process-step">
+<span>05</span>
+<h3 data-i18n="serv-proc-step-5-title">Factory Fabrication</h3>
+<p data-i18n="serv-proc-step-5-desc">Our workshop fabricates your carpentry with controlled cutting, assembly, and quality checks.</p>
+</li>
+<li class="process-step">
+<span>06</span>
+<h3 data-i18n="serv-proc-step-6-title">Install &amp; Handover</h3>
+<p data-i18n="serv-proc-step-6-desc">Our team fits, adjusts, cleans up, and walks through the completed installation with you.</p>
+</li>
+</ol>
+</section>
+<section class="border border-outline-variant bg-surface-container-low p-gutter md:p-lg flex flex-col md:flex-row gap-md md:items-center md:justify-between">
+<div class="space-y-sm max-w-3xl">
+<span data-i18n="serv-cta-kicker" class="font-label-sm text-label-sm uppercase text-secondary">Get a Direct-Factory Estimate</span>
+<h2 data-i18n="serv-cta-title" class="font-headline-lg text-headline-lg text-primary">Send Your Plan or Photos for an Estimate</h2>
+<p data-i18n="serv-cta-desc" class="font-body-md text-body-md text-on-surface-variant">Include your location, approximate dimensions, preferred finish and any reference images or repair photos. Clear inputs lead to a more useful quotation.</p>
+</div>
+<a data-i18n="whatsapp-estimate" class="shrink-0 bg-primary-container text-on-primary px-md py-sm font-label-sm text-label-sm uppercase hover:bg-surface-tint transition-colors" href="contact.html#workshop-contact">Contact the Workshop</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="site-footer bg-primary w-full mt-xl border-t-4 border-secondary">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg px-gutter py-lg max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm">
+<img alt="Tat Meng" class="site-logo site-logo-footer" decoding="async" height="548" loading="lazy" src="tat-meng-logo-web.png" width="1492"/>
+<p data-i18n="footer-desc" class="font-body-md text-body-md text-on-primary/70 max-w-xs">
+                    Custom carpentry for Singapore homes, retail spaces and workplaces, fabricated direct from the workshop.
+                </p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-links-title" class="site-footer-heading">Quick Links</h4>
+<nav class="flex flex-col gap-xs font-body-md text-body-md">
+<a data-i18n="nav-home" class="site-footer-link w-fit" href="index.html">Home</a>
+<a data-i18n="nav-about" class="site-footer-link w-fit" href="about.html">About Us</a>
+<a data-i18n="nav-services" class="site-footer-link w-fit" href="services.html">Services</a>
+<a data-i18n="nav-contact" class="site-footer-link w-fit" href="contact.html">Contact Us</a>
+</nav>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-contact-title" class="site-footer-heading">Contacts</h4>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="mailto:tatmeng.sg@gmail.com">tatmeng.sg@gmail.com</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6593926778" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9392 6778</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6591871757" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9187 1757</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6590286373" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9028 6373</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-address-title" class="site-footer-heading">Address</h4>
+<a data-i18n="footer-address" class="site-footer-link font-body-md text-body-md" href="https://www.google.com/maps/search/?api=1&amp;query=9003+Tampines+Street+93+%2301-156%2C+Singapore+528837" rel="noopener noreferrer" target="_blank">9003 Tampines St 93 #01-156<br/>Singapore 528837</a>
+<p data-i18n="footer-copyright" class="font-label-sm text-label-sm text-on-primary/50 mt-md uppercase">© 2026 Tat Meng Carpentry</p>
+</div>
+</div>
+</footer>
+</body></html>

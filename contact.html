@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get a Carpentry Estimate | Tat Meng Singapore</title>
+<meta content="Send your floor plan, dimensions, reference images or repair photos to Tat Meng for a custom carpentry estimate in Singapore." name="description"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Montserrat:wght@600;700&amp;family=Work+Sans:wght@400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script src="tailwind-config.js"></script>
+<script src="script.js" defer></script>
+<script src="translations.js" defer></script>
+<link href="styles.css" rel="stylesheet"/>
+  </head>
+<body class="page-contact bg-background text-on-background font-body-md text-body-md min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-highest w-full top-0 sticky border-b border-outline-variant dark:border-outline z-30">
+<div class="site-header-inner flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<a aria-label="Tat Meng home" href="index.html">
+<img alt="Tat Meng" class="site-logo site-logo-header" decoding="async" height="320" src="tat-meng-logo-web11.png" width="320"/>
+</a>
+</div>
+<nav class="site-header-nav hidden md:flex items-center gap-lg">
+<a data-i18n="nav-home" class="font-label-sm text-label-sm uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="index.html">Home</a>
+<a data-i18n="nav-about" class="font-label-sm text-label-sm uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="about.html">About Us</a>
+<a data-i18n="nav-services" class="font-label-sm text-label-sm uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="services.html">Services</a>
+<a data-i18n="nav-contact" class="font-label-sm text-label-sm uppercase text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex items-center gap-sm">
+<div class="relative inline-block">
+<select aria-label="Select Language" class="lang-selector-select bg-transparent text-on-surface-variant border border-outline hover:border-primary px-xs py-[2px] rounded-DEFAULT font-label-sm text-label-sm uppercase focus:outline-none cursor-pointer">
+<option class="bg-surface text-on-surface" value="en">EN</option>
+<option class="bg-surface text-on-surface" value="zh">中文</option>
+<option class="bg-surface text-on-surface" value="id">ID</option>
+</select>
+</div>
+<button aria-label="Open Menu" class="text-primary dark:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:opacity-80 active:scale-95 transition-transform md:hidden" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-on-background/40 z-40 hidden backdrop-blur-sm transition-opacity opacity-0" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<aside class="bg-surface dark:bg-surface-dim border-r border-outline-variant h-full w-80 fixed top-0 left-0 z-50 drawer-slide transition-all duration-300 iron-shadow drawer-hidden flex flex-col py-lg px-md" id="nav-drawer">
+<div class="flex justify-between items-center mb-xl">
+<div data-i18n="nav-drawer-title" class="font-headline-md text-headline-md font-bold text-primary">NAVIGATION</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-sm">
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm uppercase transition-colors rounded-none" href="index.html">
+<span class="material-symbols-outlined">home</span> <span data-i18n="nav-home">Home</span>
+            </a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm uppercase transition-colors rounded-none" href="about.html">
+<span class="material-symbols-outlined">foundation</span> <span data-i18n="nav-about">About Us</span>
+            </a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm uppercase transition-colors rounded-none" href="services.html">
+<span class="material-symbols-outlined">handyman</span> <span data-i18n="nav-services">Services</span>
+            </a>
+<a class="flex items-center gap-md px-md py-sm bg-secondary-container dark:bg-secondary-fixed-dim text-on-secondary-container dark:text-on-secondary-fixed font-bold font-label-sm text-label-sm uppercase transition-colors rounded-none" href="contact.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span> <span data-i18n="nav-contact">Contact Us</span>
+            </a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter pb-xl">
+<!-- Header Section -->
+<section class="inner-hero contact-hero mb-xl px-gutter py-xl md:py-[100px]">
+<div class="w-full max-w-container-max mx-auto">
+<div class="max-w-2xl">
+<span data-i18n="cont-hero-kicker" class="hero-kicker font-label-sm text-label-sm uppercase tracking-widest">Request an Estimate</span>
+<h1 data-i18n="cont-hero-title" class="hero-title font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg uppercase tracking-tight mt-md">Tell Us What You Need Built</h1>
+<p data-i18n="cont-hero-copy" class="hero-copy font-body-lg text-body-lg mt-sm">Send your floor plan, rough dimensions, reference images or repair photos. We will review the scope and advise what is needed for a useful quotation.</p>
+</div>
+</div>
+</section>
+<div class="mb-xl border-b border-tertiary pb-lg flex flex-col md:flex-row justify-between items-end gap-md">
+<div>
+<h2 data-i18n="cont-details-title" class="font-headline-lg text-headline-lg text-primary">Start with Clear Details</h2>
+<p data-i18n="cont-details-copy" class="font-body-md text-body-md text-on-surface-variant mt-sm max-w-2xl">Include your property type, required carpentry, approximate measurements, preferred finishes and intended timeline.</p>
+</div>
+<!-- The Ruler Decorative Element -->
+<div class="hidden md:flex gap-xs items-end h-8 border-b border-tertiary pb-1">
+<div class="w-px h-full bg-tertiary"></div><div class="w-px h-1/2 bg-tertiary"></div><div class="w-px h-1/2 bg-tertiary"></div><div class="w-px h-1/2 bg-tertiary"></div>
+<div class="w-px h-full bg-tertiary"></div><div class="w-px h-1/2 bg-tertiary"></div><div class="w-px h-1/2 bg-tertiary"></div><div class="w-px h-1/2 bg-tertiary"></div>
+<div class="font-label-sm text-label-sm text-tertiary ml-1">IN</div>
+</div>
+</div>
+<!-- Two Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Left Column: Form -->
+<div class="lg:col-span-7">
+<div class="bg-surface p-lg md:p-xl border border-outline-variant rounded-none relative">
+<!-- Subtle texture overlay -->
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMDAwMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] opacity-50 pointer-events-none"></div>
+<h2 data-i18n="cont-form-title" class="font-headline-lg text-headline-lg text-primary mb-lg relative z-10">Request a Carpentry Estimate</h2>
+<form class="flex flex-col gap-lg relative z-10" id="enquiry-form">
+<div class="flex flex-col gap-xs">
+<label data-i18n="cont-form-label-name" class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Your Name</label>
+<input data-i18n-placeholder="cont-form-placeholder-name" class="w-full bg-surface-container border border-outline focus:border-primary focus:ring-1 focus:ring-primary rounded-none p-sm font-body-md text-body-md text-on-surface transition-colors" name="name" placeholder="e.g. John Doe" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label data-i18n="cont-form-label-email" class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Your Email</label>
+<input class="w-full bg-surface-container border border-outline focus:border-primary focus:ring-1 focus:ring-primary rounded-none p-sm font-body-md text-body-md text-on-surface transition-colors" name="email" placeholder="name@domain.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label data-i18n="cont-form-label-type" class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Project Type</label>
+<select class="w-full bg-surface-container border border-outline focus:border-primary focus:ring-1 focus:ring-primary rounded-none p-sm font-body-md text-body-md text-on-surface appearance-none transition-colors" name="projectType" required="">
+<option data-i18n="cont-form-opt-select" disabled="" selected="" value="">Select an area of focus</option>
+<option data-i18n="cont-form-opt-res">Residential Carpentry</option>
+<option data-i18n="cont-form-opt-comm">Commercial Fit-Out</option>
+<option data-i18n="cont-form-opt-furniture">Bespoke Furniture</option>
+<option data-i18n="cont-form-opt-outdoor">Outdoor Carpentry</option>
+<option data-i18n="cont-form-opt-repair">Repair &amp; Alteration</option>
+</select>
+</div>
+<div class="flex flex-col gap-xs">
+<label data-i18n="cont-form-label-desc" class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Project Details &amp; Dimensions</label>
+<textarea data-i18n-placeholder="cont-form-placeholder-details" class="w-full bg-surface-container border border-outline focus:border-primary focus:ring-1 focus:ring-primary rounded-none p-sm font-body-md text-body-md text-on-surface transition-colors resize-y" name="details" placeholder="Property type, items required, approximate dimensions, preferred finish and timeline..." required="" rows="6"></textarea>
+</div>
+<button class="mt-sm bg-primary-container text-on-primary font-label-sm text-label-sm uppercase px-xl py-md rounded-none hover:bg-surface-tint transition-colors self-start flex items-center gap-sm" type="submit">
+                            <span data-i18n="cont-form-btn-submit">Send to WhatsApp</span>
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Right Column: Info & Map -->
+<div class="lg:col-span-5 flex flex-col gap-xl">
+<!-- Contact Details -->
+<div class="scroll-mt-28" id="workshop-contact">
+<h3 data-i18n="cont-info-title" class="font-headline-md text-headline-md text-primary mb-md">Contact the Workshop</h3>
+<ul class="flex flex-col gap-0 border-t border-tertiary">
+<!-- Item -->
+<li class="flex items-start gap-md py-sm border-b border-outline-variant group">
+<!-- Joinery Bolt -->
+<div class="w-xs h-xs bg-tertiary mt-2 group-hover:bg-primary-container transition-colors"></div>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">WhatsApp</div>
+<a class="font-body-lg text-body-lg text-on-surface mt-1 hover:text-primary-container transition-colors block" href="https://wa.me/6593926778" rel="noopener noreferrer" target="_blank">+65 9392 6778</a>
+<a class="font-body-lg text-body-lg text-on-surface mt-1 hover:text-primary-container transition-colors block" href="https://wa.me/6590286373" rel="noopener noreferrer" target="_blank">+65 9028 6373</a>
+<a class="font-body-lg text-body-lg text-on-surface mt-1 hover:text-primary-container transition-colors block" href="https://wa.me/6591871757" rel="noopener noreferrer" target="_blank">+65 9187 1757</a>
+</div>
+</li>
+<!-- Item -->
+<li class="flex items-start gap-md py-sm border-b border-outline-variant group">
+<div class="w-xs h-xs bg-tertiary mt-2 group-hover:bg-primary-container transition-colors"></div>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Email</div>
+<a class="font-body-md text-body-md text-on-surface mt-1 hover:text-primary-container transition-colors block" href="mailto:tatmeng.sg@gmail.com">tatmeng.sg@gmail.com</a>
+</div>
+</li>
+<!-- Item -->
+<li class="flex items-start gap-md py-sm border-b border-outline-variant group">
+<div class="w-xs h-xs bg-tertiary mt-2 group-hover:bg-primary-container transition-colors"></div>
+<div>
+<div data-i18n="cont-info-factory" class="font-label-sm text-label-sm uppercase text-on-surface-variant">Direct Factory Address</div>
+<a data-i18n="footer-address" class="font-body-md text-body-md text-on-surface mt-1 hover:text-primary-container transition-colors block" href="https://www.google.com/maps/search/?api=1&amp;query=9003+Tampines+Street+93+%2301-156%2C+Singapore+528837" rel="noopener noreferrer" target="_blank">
+                                    9003 Tampines St 93 #01-156<br/>Singapore 528837
+                                </a>
+</div>
+</li>
+</ul>
+</div>
+<!-- Map Component -->
+<div class="relative w-full aspect-video lg:aspect-square bg-surface-container border border-outline p-2">
+<div class="w-full h-full relative overflow-hidden border border-outline-variant">
+<iframe allowfullscreen="" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=9003%20Tampines%20Street%2093%20%2301-156%2C%20Singapore%20528837&amp;z=17&amp;output=embed" title="Tat Meng workshop at 9003 Tampines Street 93 #01-156, Singapore 528837"></iframe>
+<!-- Overlay overlay for brand tone -->
+<div class="absolute inset-0 bg-primary/5 mix-blend-multiply pointer-events-none"></div>
+<!-- Location Label -->
+<div class="absolute bottom-md left-md bg-surface p-sm border border-outline-variant shadow-sm flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<div data-i18n="cont-map-workshop" class="font-label-sm text-label-sm uppercase text-primary font-bold">The Workshop</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-[14px]">Tampines Industrial Park A, Singapore 528837</div>
+</div>
+</div>
+<a data-i18n="cont-map-directions" class="absolute top-md right-md bg-primary-container text-on-primary px-sm py-xs font-label-sm text-label-sm uppercase hover:bg-surface-tint transition-colors" href="https://www.google.com/maps/dir/?api=1&amp;destination=9003+Tampines+Street+93+%2301-156%2C+Singapore+528837" rel="noopener noreferrer" target="_blank">Get Directions</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="site-footer bg-primary dark:bg-surface-container-lowest w-full mt-xl border-t-4 border-secondary">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg px-gutter py-lg max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm">
+<img alt="Tat Meng" class="site-logo site-logo-footer" decoding="async" height="548" loading="lazy" src="tat-meng-logo-web.png" width="1492"/>
+<p data-i18n="footer-desc" class="font-body-md text-body-md text-on-primary/70 max-w-xs">
+                    Custom carpentry for Singapore homes, retail spaces and workplaces, fabricated direct from the workshop.
+                </p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-links-title" class="site-footer-heading">Quick Links</h4>
+<nav class="flex flex-col gap-xs font-body-md text-body-md">
+<a data-i18n="nav-home" class="site-footer-link w-fit" href="index.html">Home</a>
+<a data-i18n="nav-about" class="site-footer-link w-fit" href="about.html">About Us</a>
+<a data-i18n="nav-services" class="site-footer-link w-fit" href="services.html">Services</a>
+<a data-i18n="nav-contact" class="site-footer-link w-fit" href="contact.html">Contact Us</a>
+</nav>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-contact-title" class="site-footer-heading">Contacts</h4>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="mailto:tatmeng.sg@gmail.com">tatmeng.sg@gmail.com</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6593926778" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9392 6778</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6591871757" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9187 1757</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6590286373" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9028 6373</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-address-title" class="site-footer-heading">Address</h4>
+<a data-i18n="footer-address" class="site-footer-link font-body-md text-body-md" href="https://www.google.com/maps/search/?api=1&amp;query=9003+Tampines+Street+93+%2301-156%2C+Singapore+528837" rel="noopener noreferrer" target="_blank">9003 Tampines St 93 #01-156<br/>Singapore 528837</a>
+<p data-i18n="footer-copyright" class="font-label-sm text-label-sm text-on-primary/50 mt-md uppercase">© 2026 Tat Meng Carpentry</p>
+</div>
+</div>
+</footer>
+<!-- Interactive Script -->
+</body></html>

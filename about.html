@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Direct-Factory Carpentry Singapore | About Tat Meng</title>
+<meta content="Learn how Tat Meng plans, fabricates and installs custom residential and commercial carpentry directly from its Singapore workshop." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Montserrat:wght@600;700&amp;family=Work+Sans:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="tailwind-config.js"></script>
+<script src="script.js" defer></script>
+<script src="translations.js" defer></script>
+<link href="styles.css" rel="stylesheet"/>
+  </head>
+<body class="page-about bg-background text-on-background font-body-md antialiased relative min-h-screen flex flex-col">
+<div class="absolute inset-0 wood-grain-overlay z-0 mix-blend-multiply opacity-30"></div>
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-highest w-full top-0 sticky border-b border-outline-variant dark:border-outline z-50">
+<div class="site-header-inner flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<a aria-label="Tat Meng home" class="hover:opacity-80 transition-opacity" href="index.html">
+<img alt="Tat Meng" class="site-logo site-logo-header" decoding="async" height="320" src="tat-meng-logo-web11.png" width="320"/>
+</a>
+</div>
+<nav class="site-header-nav hidden md:flex items-center gap-lg">
+<a data-i18n="nav-home" class="font-label-sm text-label-sm uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="index.html">Home</a>
+<a data-i18n="nav-about" class="font-label-sm text-label-sm uppercase text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1" href="about.html">About Us</a>
+<a data-i18n="nav-services" class="font-label-sm text-label-sm uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="services.html">Services</a>
+<a data-i18n="nav-contact" class="font-label-sm text-label-sm uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex items-center gap-sm">
+  <!-- Language Selector Dropdown -->
+  <div class="relative inline-block">
+    <select aria-label="Select Language" class="lang-selector-select bg-transparent text-on-surface-variant border border-outline hover:border-primary px-xs py-[2px] rounded-DEFAULT font-label-sm text-label-sm uppercase focus:outline-none cursor-pointer">
+      <option class="bg-surface text-on-surface" value="en">EN</option>
+      <option class="bg-surface text-on-surface" value="zh">中文</option>
+      <option class="bg-surface text-on-surface" value="id">ID</option>
+    </select>
+  </div>
+  <button aria-label="Open Menu" class="text-primary hover:text-primary transition-colors focus:outline-none md:hidden" id="menu-btn">
+    <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+  </button>
+</div>
+</div>
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-on-background/50 z-40 hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface dark:bg-surface-dim border-r border-outline-variant z-50 transform -translate-x-full transition-transform duration-300 iron-shadow flex flex-col py-lg px-md" id="nav-drawer">
+<div class="flex items-center justify-between mb-xl">
+<span data-i18n="nav-drawer-title" class="font-headline-md text-headline-md font-bold text-primary">NAVIGATION</span>
+<button class="text-on-surface-variant hover:text-primary p-xs" id="close-drawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-sm">
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm uppercase" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                <span data-i18n="nav-home">Home</span>
+            </a>
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT bg-secondary-container dark:bg-secondary-fixed-dim text-on-secondary-container dark:text-on-secondary-fixed font-bold font-label-sm text-label-sm uppercase hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors" href="about.html">
+<span class="material-symbols-outlined" data-icon="foundation">foundation</span>
+                <span data-i18n="nav-about">About Us</span>
+            </a>
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm uppercase" href="services.html">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+                <span data-i18n="nav-services">Services</span>
+            </a>
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm uppercase" href="contact.html">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                <span data-i18n="nav-contact">Contact Us</span>
+            </a>
+</nav>
+</aside>
+<main class="flex-grow z-10 relative">
+<!-- Hero Section -->
+<section class="inner-hero about-hero w-full border-b border-tertiary/10 flex items-center">
+<div class="w-full px-gutter py-xl max-w-container-max mx-auto">
+<div class="max-w-xl flex flex-col gap-md">
+<span data-i18n="about-hero-kicker" class="hero-kicker font-label-sm text-label-sm uppercase tracking-widest">Who We Are</span>
+<h1 data-i18n="about-hero-title" class="hero-title font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg">Built Direct.<br/>Fitted to Your Space.</h1>
+</div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="w-full py-xl px-gutter max-w-container-max mx-auto border-b border-tertiary/10">
+<div class="max-w-4xl mx-auto flex flex-col gap-md text-center">
+	    <h2 data-i18n="about-intro-title" class="font-headline-lg text-headline-lg text-primary">Who We Are: Direct-Factory Carpentry Specialists</h2>
+	    <p data-i18n="about-intro-p1" class="font-body-lg text-body-lg text-primary font-semibold leading-relaxed">
+        At Tat Meng, we bridge the gap between high-end design and precision fabrication. As a direct-factory carpentry specialist in Singapore, our mission is to deliver premium, bespoke woodwork without the interior design markups or middleman fees.
+    </p>
+	    <p data-i18n="about-intro-p2" class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        We believe every space, whether a compact HDB flat, a luxury condominium or a high-traffic commercial retail unit, deserves cabinetry that is as functional as it is visually striking.
+    </p>
+</div>
+</section>
+<!-- Capability Section -->
+<section class="w-full py-xl px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm mb-lg">
+<span class="font-label-sm text-label-sm uppercase text-secondary flex items-center gap-xs">
+<div class="w-2 h-2 bg-secondary"></div>
+	                    <span data-i18n="about-exp-kicker">Expertise</span>
+                </span>
+<h2 data-i18n="about-exp-title" class="font-headline-lg text-headline-lg text-primary">Residential Built-Ins &amp; Commercial Fit-Outs</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-xl">
+<div class="bg-surface-container-low border border-tertiary/10 rounded-DEFAULT overflow-hidden flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+    <img alt="Real custom kitchen built-in cabinetry installation on-site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/projects/Branded_IMG20260529112311.jpg"/>
+</div>
+<div class="p-lg flex flex-col gap-md flex-grow">
+<span class="material-symbols-outlined text-[32px] text-primary" data-icon="home_work">home_work</span>
+<h3 data-i18n="about-card-res-title" class="font-headline-md text-headline-md text-primary mt-sm">Built for Singapore Homes</h3>
+<p data-i18n="about-card-res-p1" class="font-body-md text-body-md text-on-surface-variant">
+                         For homeowners, we create space-efficient cabinetry for kitchens, wardrobes, TV consoles, foyers and home offices. Each design is planned around the room, appliance clearances and the storage you actually need.
+                     </p>
+<p data-i18n="about-card-res-p2" class="font-body-md text-body-md text-on-surface-variant">
+                         Select laminates, internal configurations and hardware to suit your preferred look, daily usage and budget. We recommend suitable material options for Singapore's humid conditions and high-use areas.
+                     </p>
+</div>
+</div>
+<div class="bg-primary text-on-primary border border-primary rounded-DEFAULT overflow-hidden flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+    <img alt="Commercial Carpentry Fit-Out" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/projects/retail-fitout.jpg"/>
+</div>
+<div class="p-lg flex flex-col gap-md flex-grow">
+<span class="material-symbols-outlined text-[32px] text-on-primary" data-icon="storefront">storefront</span>
+<h3 data-i18n="about-card-comm-title" class="font-headline-md text-headline-md text-on-primary mt-sm">Commercial Fit-Out Solutions</h3>
+<p data-i18n="about-card-comm-p1" class="font-body-md text-body-md text-on-primary/80">
+                         For commercial spaces, we fabricate reception counters, retail displays, workstations, pantry cabinets and F&amp;B fixtures that support operations while presenting your brand cleanly.
+                     </p>
+<p data-i18n="about-card-comm-p2" class="font-body-md text-body-md text-on-primary/80">
+                         Bring your floor plan, drawings or reference images. We review dimensions, material choices and installation constraints before fabrication, so the quoted scope stays clear.
+                     </p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-sm mb-lg">
+<span class="font-label-sm text-label-sm uppercase text-secondary flex items-center gap-xs">
+<div class="w-2 h-2 bg-secondary"></div>
+	                    <span data-i18n="about-process-kicker">Transparent Process</span>
+                </span>
+<h2 data-i18n="about-process-title" class="font-headline-lg text-headline-lg text-primary">Direct from Workshop to Site</h2>
+<p data-i18n="about-process-desc" class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+                    Working direct keeps the job practical: define the scope, confirm dimensions and finishes, approve the quotation, then fabricate and install.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xl">
+<div class="bg-surface-container-low border border-tertiary/10 p-lg rounded-DEFAULT flex flex-col gap-md relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm opacity-10 font-display-lg text-display-lg text-primary font-bold">01</div>
+<span class="material-symbols-outlined text-[32px] text-primary" data-icon="straighten">straighten</span>
+<h3 data-i18n="about-step-1-title" class="font-headline-md text-headline-md text-primary mt-sm">Measure &amp; Review</h3>
+<p data-i18n="about-step-1-desc" class="font-body-md text-body-md text-on-surface-variant">
+                          Share your floor plan or brief, then confirm measurements, access, appliance locations and storage requirements.
+                      </p>
+</div>
+<div class="bg-surface-container-low border border-tertiary/10 p-lg rounded-DEFAULT flex flex-col gap-md relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm opacity-10 font-display-lg text-display-lg text-primary font-bold">02</div>
+<span class="material-symbols-outlined text-[32px] text-primary" data-icon="receipt_long">receipt_long</span>
+<h3 data-i18n="about-step-2-title" class="font-headline-md text-headline-md text-primary mt-sm">Itemized Quote</h3>
+<p data-i18n="about-step-2-desc" class="font-body-md text-body-md text-on-surface-variant">
+                          Review the proposed scope, materials, hardware, finishes and installation items before work begins.
+                      </p>
+</div>
+<div class="bg-primary text-on-primary border border-primary p-lg rounded-DEFAULT flex flex-col gap-md relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm opacity-20 font-display-lg text-display-lg text-on-primary font-bold z-10">03</div>
+<span class="material-symbols-outlined text-[32px] text-on-primary z-10" data-icon="handyman">handyman</span>
+<h3 data-i18n="about-step-3-title" class="font-headline-md text-headline-md text-on-primary mt-sm z-10">Fabricate &amp; Install</h3>
+<p data-i18n="about-step-3-desc" class="font-body-md text-body-md text-on-primary/80 z-10">
+                          Your carpentry is fabricated in the workshop, installed on site and checked with you at handover.
+                      </p>
+</div>
+</div>
+</section>
+<!-- Factory Showcase Section -->
+<section class="w-full pb-xl px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center bg-surface-container-low border border-tertiary/10 rounded-DEFAULT overflow-hidden">
+<div class="p-lg md:p-xl flex flex-col gap-md">
+<span data-i18n="about-fac-kicker" class="font-label-sm text-label-sm uppercase text-secondary">Our Facility</span>
+<h2 data-i18n="about-fac-title" class="font-headline-lg text-headline-lg text-primary">Local Workshop, Direct Accountability</h2>
+<p data-i18n="about-fac-desc" class="font-body-md text-body-md text-on-surface-variant">
+                    Our Singapore workshop supports measured fabrication and direct coordination from quotation through installation. That means fewer handoffs when you need to clarify a detail, revise a scope or confirm a finish.
+                </p>
+</div>
+<div class="h-80 lg:h-full min-h-[320px] relative overflow-hidden">
+<img alt="Tat Meng Carpentry Workshop fabrication in progress" class="w-full h-full object-cover" src="assets/projects/Branded_IMG20260525141307.jpg"/>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="w-full px-gutter pb-xl max-w-container-max mx-auto">
+<div class="bg-surface-container-low border border-tertiary/10 p-lg md:p-xl rounded-DEFAULT flex flex-col md:flex-row gap-lg md:items-center md:justify-between">
+<div class="max-w-3xl flex flex-col gap-sm">
+<span data-i18n="about-cta-kicker" class="font-label-sm text-label-sm uppercase text-secondary tracking-widest">Work Directly With the Craftsmen</span>
+<h2 data-i18n="about-cta-title" class="font-headline-lg text-headline-lg text-primary">Get an Estimate for Your Build</h2>
+<p data-i18n="about-cta-desc" class="font-body-md text-body-md text-on-surface-variant">
+                        Planning built-in cabinets, bespoke furniture, commercial fixtures or repairs? Send your floor plan, rough dimensions or reference photos through WhatsApp so we can assess the scope and advise the next step.
+                    </p>
+</div>
+<a data-i18n="whatsapp-estimate" class="shrink-0 bg-primary-container text-on-primary px-md py-sm font-label-sm text-label-sm uppercase hover:bg-surface-tint transition-colors" href="contact.html#workshop-contact">Contact the Workshop</a>
+</div>
+</section>
+<!-- Divider Ruler -->
+<div class="w-full max-w-container-max mx-auto px-gutter py-md">
+<div class="w-full h-px bg-tertiary/20 relative flex justify-between">
+<div class="h-2 w-px bg-tertiary/40"></div>
+<div class="h-1 w-px bg-tertiary/20"></div>
+<div class="h-1 w-px bg-tertiary/20"></div>
+<div class="h-1 w-px bg-tertiary/20"></div>
+<div class="h-2 w-px bg-tertiary/40"></div>
+<div class="h-1 w-px bg-tertiary/20"></div>
+<div class="h-1 w-px bg-tertiary/20"></div>
+<div class="h-1 w-px bg-tertiary/20"></div>
+<div class="h-2 w-px bg-tertiary/40"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="site-footer bg-primary dark:bg-surface-container-lowest border-t-4 border-secondary mt-xl w-full z-10 relative">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg px-gutter py-lg max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm">
+<img alt="Tat Meng" class="site-logo site-logo-footer" decoding="async" height="548" loading="lazy" src="tat-meng-logo-web.png" width="1492"/>
+<p data-i18n="footer-desc" class="font-body-md text-body-md text-on-primary/70 max-w-xs">
+                    Custom carpentry for Singapore homes, retail spaces and workplaces, fabricated direct from the workshop.
+                </p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-links-title" class="site-footer-heading">Quick Links</h4>
+<nav class="flex flex-col gap-xs font-body-md text-body-md">
+<a data-i18n="nav-home" class="site-footer-link w-fit" href="index.html">Home</a>
+<a data-i18n="nav-about" class="site-footer-link w-fit" href="about.html">About Us</a>
+<a data-i18n="nav-services" class="site-footer-link w-fit" href="services.html">Services</a>
+<a data-i18n="nav-contact" class="site-footer-link w-fit" href="contact.html">Contact Us</a>
+</nav>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-contact-title" class="site-footer-heading">Contacts</h4>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="mailto:tatmeng.sg@gmail.com">tatmeng.sg@gmail.com</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6593926778" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9392 6778</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6591871757" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9187 1757</a>
+<a class="site-footer-link font-body-md text-body-md w-fit" href="https://wa.me/6590286373" rel="noopener noreferrer" target="_blank">WhatsApp: +65 9028 6373</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 data-i18n="footer-address-title" class="site-footer-heading">Address</h4>
+<a data-i18n="footer-address" class="site-footer-link font-body-md text-body-md" href="https://www.google.com/maps/search/?api=1&amp;query=9003+Tampines+Street+93+%2301-156%2C+Singapore+528837" rel="noopener noreferrer" target="_blank">9003 Tampines St 93 #01-156<br/>Singapore 528837</a>
+<p data-i18n="footer-copyright" class="font-label-sm text-label-sm text-on-primary/50 mt-md uppercase">© 2026 Tat Meng Carpentry</p>
+</div>
+</div>
+</footer>
+</body></html>

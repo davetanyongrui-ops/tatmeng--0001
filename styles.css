@@ -1,0 +1,808 @@
+body {
+    min-height: max(884px, 100dvh);
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.site-logo {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+.site-logo-header {
+    height: 4.25rem;
+    transform: scale(1.18);
+    transform-origin: left center;
+    width: 4.25rem;
+}
+
+.site-logo-footer {
+    filter: brightness(0) invert(1);
+    height: auto;
+    margin-bottom: 0.75rem;
+    max-width: 100%;
+    width: 11.5rem;
+}
+
+@media (max-width: 767px) {
+    .site-logo-header {
+        height: 3.5rem;
+        transform: scale(1.18);
+        width: 3.5rem;
+    }
+
+    .site-logo-footer {
+        height: auto;
+        width: 10.5rem;
+    }
+}
+
+.site-header-inner {
+    min-height: 5.25rem;
+    position: relative;
+}
+
+.site-header-nav {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.site-header-inner .lang-selector-select {
+    font-size: 0.875rem;
+    min-width: 4.5rem;
+    padding: 0.4rem 0.65rem;
+}
+
+.site-footer {
+    color: #ffffff;
+}
+
+.site-footer-heading {
+    color: #d7e4ec;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.site-footer-link {
+    color: rgba(255, 255, 255, 0.72);
+    transition: color 0.2s ease;
+}
+
+.site-footer-link:hover {
+    color: #ffffff;
+}
+
+.page-home .iron-shadow {
+    box-shadow: 0 10px 25px -5px rgba(38, 50, 56, 0.4), 0 8px 10px -6px rgba(38, 50, 56, 0.2);
+}
+
+.page-home .wood-grain-overlay {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.05' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/></svg>");
+}
+
+.home-hero {
+    min-height: clamp(30rem, calc(100vh - 14rem), 35rem);
+}
+
+.home-about-preview {
+    border-bottom: 1px solid #d3c3c0;
+    padding: 4.75rem 1.5rem;
+}
+
+.home-about-preview-grid {
+    align-items: stretch;
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 4.25rem);
+    grid-template-columns: minmax(25rem, 1fr) minmax(24rem, 0.88fr);
+}
+
+.home-about-preview-copy h2 {
+    margin: 0.7rem 0 1.1rem;
+    max-width: 37rem;
+}
+
+.home-about-preview-copy > p {
+    max-width: 38rem;
+}
+
+.home-about-preview-copy > p + p {
+    margin-top: 1rem;
+}
+
+.home-about-preview-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 2.1rem;
+}
+
+.home-about-preview-button {
+    align-items: center;
+    background: #271310;
+    color: #ffffff;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    gap: 0.55rem;
+    letter-spacing: 0.06em;
+    padding: 1rem 1.3rem;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.home-about-preview-button:hover {
+    background: #546067;
+}
+
+.home-about-preview-button .material-symbols-outlined {
+    font-size: 1.05rem;
+}
+
+.home-about-feature-image {
+    background: #271310;
+    display: flex;
+    flex-direction: column;
+    min-height: 29rem;
+}
+
+.home-about-feature-image img {
+    display: block;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+.home-about-feature-image figcaption {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    padding: 0.9rem 1rem;
+    text-transform: uppercase;
+}
+
+.home-about-values {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.25rem;
+}
+
+.home-about-values article {
+    background: #f2edeb;
+    border-top: 3px solid #7e665f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.home-about-values article > div {
+    padding: 1.6rem 1.4rem 1.75rem;
+}
+
+.home-about-values article span {
+    color: #7e665f;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+}
+
+.home-about-values h3 {
+    color: #271310;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 0.45rem;
+}
+
+.home-about-values p {
+    color: #504442;
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+.home-direct {
+    padding: 5rem 1.5rem;
+}
+
+.home-direct-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 3.5rem;
+    grid-template-columns: minmax(25rem, 0.92fr) minmax(28rem, 1fr);
+}
+
+.home-direct-copy {
+    align-self: center;
+}
+
+.home-direct-copy h2 {
+    margin: 0.7rem 0 1.15rem;
+}
+
+.home-direct-copy > p {
+    max-width: 35rem;
+}
+
+.home-process {
+    margin: 2.25rem 0 1.75rem;
+    position: relative;
+}
+
+.home-process-step {
+    display: grid;
+    gap: 1.1rem;
+    grid-template-columns: 3.35rem 1fr;
+    padding-bottom: 1.15rem;
+    position: relative;
+}
+
+.home-process-step:not(:last-child)::before {
+    background: #d3c3c0;
+    content: "";
+    height: calc(100% - 2.2rem);
+    left: 1.32rem;
+    position: absolute;
+    top: 3.15rem;
+    width: 1px;
+}
+
+.home-process-number {
+    align-items: center;
+    background: #271310;
+    color: #ffffff;
+    display: flex;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    height: 2.7rem;
+    justify-content: center;
+    letter-spacing: 0.12em;
+    width: 2.7rem;
+}
+
+.home-process-content {
+    background: #f2edeb;
+    border-left: 3px solid transparent;
+    padding: 1.05rem 1.15rem 1.15rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.home-process-step:hover .home-process-content {
+    background: #ede5e1;
+    border-left-color: #7e665f;
+}
+
+.home-process-phase {
+    color: #7e665f;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.home-process h3 {
+    color: #271310;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 0.3rem;
+}
+
+.home-process p {
+    color: #504442;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.home-text-link {
+    align-items: center;
+    color: #546067;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    gap: 0.35rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.home-text-link:hover {
+    color: #271310;
+}
+
+.home-text-link .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+.home-direct-image {
+    background: #271310;
+    display: flex;
+    flex-direction: column;
+    min-height: 27rem;
+}
+
+.home-direct-image img {
+    display: block;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+.home-direct-image figcaption {
+    color: rgba(255, 255, 255, 0.68);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 0.9rem 1rem;
+    text-transform: uppercase;
+}
+
+.home-work {
+    border-top: 1px solid #d3c3c0;
+    padding: 4.5rem 1.5rem 5rem;
+}
+
+.home-work-header {
+    border-bottom: 1px solid #d3c3c0;
+    margin-bottom: 2rem;
+    padding-bottom: 1.4rem;
+}
+
+.home-work-header h2 {
+    margin-top: 0.5rem;
+}
+
+.home-work-header p {
+    margin: 1rem 0 1.15rem;
+    max-width: 38rem;
+}
+
+.home-work-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1.25fr repeat(3, 0.75fr);
+}
+
+.home-project {
+    min-height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-project img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+    width: 100%;
+}
+
+.home-project:hover img {
+    transform: scale(1.035);
+}
+
+.home-project div {
+    background: linear-gradient(0deg, rgba(39, 19, 16, 0.94), rgba(39, 19, 16, 0.02));
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    padding: 4.5rem 1.4rem 1.4rem;
+    position: absolute;
+    right: 0;
+}
+
+.home-project span {
+    color: #bbc8d0;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.45rem;
+    text-transform: uppercase;
+}
+
+.home-project h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.home-project-large {
+    min-height: 30rem;
+}
+
+.home-estimate {
+    padding: 0 1.5rem;
+}
+
+.home-estimate-grid {
+    align-items: center;
+    display: grid;
+    gap: clamp(2rem, 4vw, 3.25rem);
+    grid-template-columns: minmax(28rem, 1fr) minmax(23rem, 0.78fr);
+}
+
+.home-estimate-copy {
+    padding: 3.75rem 0;
+}
+
+.home-estimate h2 {
+    color: #ffffff;
+    margin: 0.65rem 0 0.65rem;
+    max-width: 46rem;
+}
+
+.home-estimate p {
+    color: rgba(255, 255, 255, 0.76);
+    margin-bottom: 1.8rem;
+    max-width: 43rem;
+}
+
+.home-estimate-button {
+    align-items: center;
+    background: #ffffff;
+    color: #271310;
+    display: inline-flex;
+    flex-shrink: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    gap: 0.55rem;
+    letter-spacing: 0.06em;
+    padding: 1rem 1.35rem;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.home-estimate-button:hover {
+    background: #d7e4ec;
+}
+
+.home-estimate-button .material-symbols-outlined {
+    font-size: 1.05rem;
+}
+
+.home-estimate-image {
+    height: 100%;
+    min-height: 22.5rem;
+    overflow: hidden;
+}
+
+.home-estimate-image img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.page-about .wood-grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.05' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.page-about .iron-shadow {
+    box-shadow: 0 10px 20px -5px rgba(38, 50, 56, 0.4);
+}
+
+.inner-hero {
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.inner-hero .hero-kicker,
+.inner-hero .hero-copy {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.inner-hero .hero-title {
+    color: #ffffff;
+}
+
+.about-hero {
+    background-image: linear-gradient(90deg, rgba(39, 19, 16, 0.84) 0%, rgba(39, 19, 16, 0.48) 48%, rgba(39, 19, 16, 0.18) 100%), url("assets/hero/about-workshop-hero.jpg");
+    min-height: 34rem;
+}
+
+.services-hero {
+    background-image: linear-gradient(rgba(39, 19, 16, 0.62), rgba(39, 19, 16, 0.66)), url("assets/projects/services-hero-workshop.jpg");
+}
+
+.contact-hero {
+    background-image: linear-gradient(90deg, rgba(39, 19, 16, 0.76), rgba(39, 19, 16, 0.24)), url("assets/hero/contact-consultation-hero.jpg");
+}
+
+.services-hero,
+.contact-hero {
+    margin-left: calc(50% - 50vw);
+    min-height: 34rem;
+    width: 100vw;
+}
+
+.services-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-hero {
+    align-items: center;
+    display: flex;
+}
+
+.page-services {
+    background-color: #f9f9f9;
+    color: #1a1c1c;
+    font-family: "Work Sans", sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2324150f' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-services h1,
+.page-services h2,
+.page-services h3,
+.page-services h4,
+.page-services h5,
+.page-services h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.page-services .iron-shadow {
+    box-shadow: 0 10px 25px -5px rgba(38, 50, 56, 0.5), 0 8px 10px -6px rgba(38, 50, 56, 0.5);
+}
+
+.service-detail {
+    border-top: 1px solid #d3c3c0;
+    padding-top: 0.75rem;
+}
+
+.service-detail h3 {
+    color: #271310;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 0.45rem;
+}
+
+.service-detail p {
+    color: #504442;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.service-detail-dark {
+    border-color: rgba(215, 228, 236, 0.38);
+}
+
+.service-detail-dark h3 {
+    color: #ffffff;
+}
+
+.service-detail-dark p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.gallery-card {
+    background: #271310;
+    border: 1px solid rgba(119, 89, 85, 0.28);
+}
+
+.gallery-card-image {
+    display: block;
+}
+
+.project-example {
+    background: #271310;
+    min-height: 15rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-example img {
+    display: block;
+    height: 15rem;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+    width: 100%;
+}
+
+.project-example:hover img {
+    transform: scale(1.04);
+}
+
+.project-example figcaption {
+    background: linear-gradient(0deg, rgba(39, 19, 16, 0.92), rgba(39, 19, 16, 0));
+    bottom: 0;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    left: 0;
+    padding: 2.5rem 1rem 1rem;
+    position: absolute;
+    right: 0;
+}
+
+.service-category-visual {
+    background: #271310;
+    margin-top: 0.75rem;
+    overflow: hidden;
+}
+
+.service-category-visual img {
+    display: block;
+    height: 12.5rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.service-category-visual figcaption {
+    background: #f2edeb;
+    color: #504442;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 0.7rem 0.85rem;
+    text-transform: uppercase;
+}
+
+.service-category-visual-dark figcaption {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.process-step {
+    border-top: 1px solid #d3c3c0;
+    padding-top: 1rem;
+}
+
+.process-step span {
+    color: #7e665f;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.65rem;
+}
+
+.process-step h3 {
+    color: #271310;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+}
+
+.process-step p {
+    color: #504442;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.page-contact .drawer-hidden {
+    transform: translateX(-100%);
+}
+
+.page-contact .drawer-visible {
+    transform: translateX(0);
+}
+
+.page-contact .iron-shadow {
+    box-shadow: 4px 0 24px rgba(36, 21, 15, 0.2);
+}
+
+@media (max-width: 1023px) {
+    .home-about-preview-grid {
+        display: block;
+    }
+
+    .home-about-preview-copy {
+        margin-bottom: 2.6rem;
+    }
+
+    .home-about-feature-image {
+        min-height: 23rem;
+    }
+
+    .home-about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .home-about-values article {
+        max-width: 48rem;
+    }
+
+    .home-estimate-grid {
+        display: block;
+    }
+
+    .home-estimate-copy {
+        padding: 3.5rem 0 2.5rem;
+    }
+
+    .home-estimate-image {
+        height: 20rem;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-hero {
+        min-height: 34rem;
+    }
+
+    .home-about-preview {
+        padding: 3.25rem 1.5rem;
+    }
+
+    .home-about-preview-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .home-about-feature-image {
+        min-height: 19rem;
+    }
+
+    .home-about-values {
+        margin-top: 2.25rem;
+    }
+
+    .home-direct,
+    .home-work {
+        padding: 3.25rem 1.5rem;
+    }
+
+    .home-direct-grid,
+    .home-work-grid {
+        display: block;
+    }
+
+    .home-direct-image {
+        margin-top: 2rem;
+        min-height: 20rem;
+    }
+
+    .home-project,
+    .home-project-large {
+        height: 18rem;
+        margin-top: 1rem;
+        min-height: 0;
+    }
+
+    .home-estimate {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .home-estimate-copy {
+        padding: 3rem 0 2.25rem;
+    }
+
+    .home-estimate-image {
+        height: 14.5rem;
+    }
+
+    .about-hero {
+        min-height: 30rem;
+    }
+}
